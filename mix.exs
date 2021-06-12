@@ -8,6 +8,7 @@ defmodule Badpasswords.MixProject do
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
+      description: description(),
       package: package(),
       source_url: "https://github.com/ctrlShiftBryan/BadPasswords"
     ]
@@ -26,6 +27,12 @@ defmodule Badpasswords.MixProject do
       maintainers: ["Bryan Arendt"],
       links: %{"GitHub" => "https://github.com/ctrlShiftBryan/BadPasswords"}
     }
+  end
+
+  defp description() do
+    """
+    A genserver that loads up an ets table with bad passwords and a helper function to look the password up. As described here https://elixirforum.com/t/most-performant-way-to-search-a-file-for-a-string/16996
+    """
   end
 
   # Run "mix help deps" to learn about dependencies.
